@@ -18,9 +18,11 @@
 <result name="table">/primary-data.jsp</result>
 </action>
 
-
-
 <action name="fistaction" class="com.fjg.action.HelloWordAction" >
+<result name="success" >/getAttribute.jsp</result>
+</action>
+
+<action name="test" class="com.fjg.servlet.TestServlet" >
 <result name="success" >/getAttribute.jsp</result>
 </action>
 </package>

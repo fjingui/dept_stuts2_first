@@ -30,6 +30,11 @@ public class sqlConnTest extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
+		 HttpServletRequest hsr= (HttpServletRequest) request;
+		 String str1=hsr.getContextPath();
+		String str2= hsr.getServletPath();
+		
+		System.out.println("str1"+str1+","+str2);
 			try {
 				Statement stmt=MySqlConn.getConnection().createStatement();
 			  rs = stmt.executeQuery("select * from tb_b_ft_dept_kpi_esmti");
